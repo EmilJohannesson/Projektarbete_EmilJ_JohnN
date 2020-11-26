@@ -52,5 +52,10 @@ namespace Store
                 NameField.Text = "...";
             }
         }
+
+        private void NameField_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
