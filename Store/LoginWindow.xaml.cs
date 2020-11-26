@@ -29,11 +29,15 @@ namespace Store
             // det användaren skrev in.
             string username_in_text = NameField.Text.Trim();
 
+            string password_in_text = PasswordField.Password;
+
             // Kallar på min databas api för att få ut ett record som matchar namnet.
             State.User = API.GetCustomerByName(username_in_text);
 
+            State.Password = API.GetPasswordByName(password_in_text);
+
             // Om ett record hittades...
-            if (State.User != null)
+            if (State.User != null & State.Password != null )
             {
                 // Skapa och visa nästa fönster.
                 var next_window = new MainWindow();
