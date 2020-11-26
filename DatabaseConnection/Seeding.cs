@@ -32,11 +32,13 @@ namespace DatabaseConnection
 
                     var url = cells[5].Trim('"');
 
+                    var score = cells[3];
+
                     // Hoppa över alla icke-fungerande url:er
                     try{ var test = new Uri(url); }
                     catch (Exception) { continue; }
 
-                    movies.Add(new Movie { Title = cells[2], ImageURL = url });
+                    movies.Add(new Movie { Title = cells[2], Score = score, ImageURL = url });
                 }
                 ctx.AddRange(movies);
 
