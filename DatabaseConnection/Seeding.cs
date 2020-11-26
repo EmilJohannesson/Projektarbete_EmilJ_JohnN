@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
+using System.Globalization;
 
 namespace DatabaseConnection
 {
@@ -10,6 +11,8 @@ namespace DatabaseConnection
     {
         static void Main() 
         {
+            CultureInfo.CurrentCulture = new CultureInfo("en-US", false);
+
             using (var ctx = new Context())
             {
                 ctx.RemoveRange(ctx.Sales);
@@ -32,7 +35,8 @@ namespace DatabaseConnection
 
                     var url = cells[5].Trim('"');
 
-                    var score = cells[3];
+                    string scoreString = cells[3];
+                    double score = double.Parse(scoreString);
 
                     // Hoppa över alla icke-fungerande url:er
                     try{ var test = new Uri(url); }
