@@ -13,7 +13,7 @@ using DatabaseConnection;
 
 namespace Store
 {
-    /// <summary>
+    /// <summary>..
     /// Interaction logic for LoginWindow.xaml
     /// </summary>
     public partial class LoginWindow : Window
