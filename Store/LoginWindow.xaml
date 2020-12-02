@@ -8,12 +8,12 @@
         Title="LoginWindow" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.494,0.518">
         <Label Content="Enter Your Name" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top"/>
-        <Label Content="Enter Your Password" HorizontalAlignment="Center" Margin="203"/>
+        <Label Content="Enter Your Password" HorizontalAlignment="Center" Margin="0,210,0,0"/>
         <!-- 
             En TextBox för att hämta in ett användarnamn från användaren. 
             Ger objektinstansen ett namn för att komma åt det inne i C# koden.
         -->
-        <TextBox Name="NameField" HorizontalAlignment="Center" Margin="0,184,0,0" Text="..." TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="NameField" HorizontalAlignment="Center" Margin="0,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <!-- 
             En Button att klicka på när man vill logga in.
             Click-eventet är kopplat till LogIn_Click metoden 

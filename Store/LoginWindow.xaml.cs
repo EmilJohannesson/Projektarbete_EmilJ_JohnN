@@ -49,7 +49,7 @@ namespace Store
             else
             {
                 // Annars återställer vi innehållet i TextBox
-                NameField.Text = "...";
+                NameField.Text = "";
                 PasswordField.Password = "";
                 MessageBox.Show("Wrong username or password!");
             }
