@@ -12,7 +12,7 @@
             Grid är användbart när man vill få lite struktur i sin UI.
             Alla celler måste inte vara lika stora dock som i detta exemplet
         -->
-        <Grid Name="MovieGrid" Background="LightSteelBlue" ShowGridLines="True">
+        <Grid Name="MovieGrid" Margin="0,50,0,0" Background="LightSteelBlue" ShowGridLines="True">
             <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="157*" />
@@ -25,7 +25,12 @@
             <!-- Antalet rader fyller jag på inne i 'MainWindow.xaml.cs' -->
             <Grid.RowDefinitions>
             </Grid.RowDefinitions>
-            <Button Name="UserWindowButton" Content="User Window" HorizontalAlignment="Left" Height="28" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" Click="UserWindowButton_Click"/>
+            <StackPanel Orientation="Horizontal" Height="50" Width="800" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-50,0,0" Grid.ColumnSpan="6">
+                <Button  Name="UserWindowButton" Click="UserWindowButton_Click" VerticalAlignment="Top" Width="100" Margin="220,15,10,0">User window</Button>
+                <Button VerticalAlignment="Top" Width="100" Margin="10,15,10,0">Sort by name</Button>
+                <Button VerticalAlignment="Top" Width="100" Margin="10,15,220,0">Sort by rating</Button>
+
+            </StackPanel>
         </Grid>
     </ScrollViewer>
 </Window>
