@@ -15,15 +15,17 @@
         <Grid Name="MovieGrid" Background="LightSteelBlue" ShowGridLines="True">
             <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="129*" />
+                <ColumnDefinition Width="28*"/>
             </Grid.ColumnDefinitions>
             <!-- Antalet rader fyller jag på inne i 'MainWindow.xaml.cs' -->
             <Grid.RowDefinitions>
             </Grid.RowDefinitions>
+            <Button Name="UserWindowButton" Content="User Window" HorizontalAlignment="Left" Height="28" Margin="10,0,0,0" VerticalAlignment="Top" Width="92" Click="UserWindowButton_Click"/>
         </Grid>
     </ScrollViewer>
 </Window>

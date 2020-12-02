@@ -115,5 +115,11 @@ namespace Store
             else
                 MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
+
+        private void UserWindowButton_Click(object sender, RoutedEventArgs e)
+        {
+            UserWindow objUserWindow = new UserWindow();
+            objUserWindow.Show();
+        }
     }
 }
