@@ -34,10 +34,10 @@ namespace Store
             // Kallar på min databas api för att få ut ett record som matchar namnet.
             State.User = API.GetCustomerByName(username_in_text);
 
-            State.Password = API.GetPasswordByName(password_in_text);
+            bool password = API.GetPasswordByName(password_in_text, username_in_text);
 
             // Om ett record hittades...
-            if (State.User != null & State.Password != null )
+            if (State.User != null && password)
             {
                 // Skapa och visa nästa fönster.
                 var next_window = new MainWindow();
@@ -50,6 +50,8 @@ namespace Store
             {
                 // Annars återställer vi innehållet i TextBox
                 NameField.Text = "...";
+                PasswordField.Password = "";
+                MessageBox.Show("Wrong username or password!");
             }
         }
 

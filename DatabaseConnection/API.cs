@@ -30,10 +30,23 @@ namespace DatabaseConnection
             return ctx.Customers
                 .FirstOrDefault(c => c.Name.ToLower() == name.ToLower());
         }
-        public static Customer GetPasswordByName(string password)
+        public static bool GetPasswordByName(string password, string username) // Metod för att kolla password
         {
-            return ctx.Customers
-                .FirstOrDefault(c => c.PassWord == password);
+            var password_check = "";
+            try
+            {
+                password_check = ctx.Customers.Where(c => c.Name == username).Single().PassWord; // hämta password från Databasen
+            }
+            catch
+            {
+                return false;
+            }
+
+            if (Convert.ToString(password_check) == password) // Kolla om angivet password stämmer enligt Databasen
+            {
+                return true;
+            }
+            else return false;
         }
         public static bool RegisterSale(Customer customer, Movie movie)
         {

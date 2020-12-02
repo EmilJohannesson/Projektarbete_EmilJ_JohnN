@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="LoginWindow" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.494,0.518">
-        <Label Content="Enter Your Name" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enter Your Name" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enter Your Password" HorizontalAlignment="Center" Margin="203"/>
         <!-- 
             En TextBox för att hämta in ett användarnamn från användaren. 
             Ger objektinstansen ett namn för att komma åt det inne i C# koden.
@@ -19,6 +20,6 @@
             som finns definierad inne i 'LoginWindow.xaml.cs'
         -->
         <Button Click="LogIn_Click" Content="Log In" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top"/>
-        <PasswordBox Name="PasswordField" HorizontalAlignment="Center" Margin="0,241,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.484,-5.641"/>
+        <PasswordBox Name="PasswordField" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
