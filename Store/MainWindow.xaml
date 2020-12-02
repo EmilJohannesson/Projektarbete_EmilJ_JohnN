@@ -12,7 +12,7 @@
             Grid är användbart när man vill få lite struktur i sin UI.
             Alla celler måste inte vara lika stora dock som i detta exemplet
         -->
-        <Grid Name="MovieGrid" Background="LightSteelBlue" ShowGridLines="True">
+        <Grid Name="MovieGrid" Background="White" ShowGridLines="False">
             <!-- Här har jag manuellt bestämt antalet kolumner jag vill ha -->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="157*" />
