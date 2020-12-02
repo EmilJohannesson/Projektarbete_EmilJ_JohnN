@@ -24,6 +24,7 @@ namespace DatabaseConnection
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
+        public DateTime ReturnDate { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Movie Movie { get; set; }
     }
