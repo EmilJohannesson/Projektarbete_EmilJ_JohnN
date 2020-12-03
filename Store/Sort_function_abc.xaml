@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="Sort_function_abc" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Sort_function_abc" Height="600" Width="1200">
+    <ScrollViewer>
+        <Grid Name="MovieGrid" Margin="0,50,0,0" Background="LightSteelBlue" ShowGridLines="false">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="157*" />
+                <ColumnDefinition Width="157*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Height="50" Width="1200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-50,0,0" Grid.ColumnSpan="6">
+                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="240,0,10,0" >User window</Button>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,0">Sort by name</Button>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,0">Sort by rating</Button>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
 </Window>

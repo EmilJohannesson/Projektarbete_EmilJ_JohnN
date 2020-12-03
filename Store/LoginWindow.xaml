@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="800">
+        Title="LoginWindow" Height="600" Width="1200">
     <Grid RenderTransformOrigin="0.494,0.518">
         <Label Content="Enter Your Name" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top"/>
         <Label Content="Enter Your Password" HorizontalAlignment="Center" Margin="0,210,0,0"/>

@@ -16,8 +16,15 @@ namespace DatabaseConnection
         {
             ctx = new Context();
         }
-
         public static List<Movie> GetMovieSlice(int skip_x, int take_x)
+        {
+            return ctx.Movies
+                .OrderBy(m => m.Title)
+                .Skip(skip_x)
+                .Take(take_x)
+                .ToList();
+        }
+        public static List<Movie> GetMovieSliceAlpha(int skip_x, int take_x)
         {
             return ctx.Movies
                 .OrderBy(m => m.Title)

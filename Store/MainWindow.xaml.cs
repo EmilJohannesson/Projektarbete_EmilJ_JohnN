@@ -42,18 +42,18 @@ namespace Store
              */
             int row_count = (int)Math.Ceiling((double)State.Movies.Count / (double)column_count);
 
-            for (int y = 0; y < row_count; y++)
+            for (int y = 0; y < (row_count*2); y++)
             {
                 // Skapa en rad-definition för att bestämma hur hög just denna raden är.
                 MovieGrid.RowDefinitions.Add(
-                    new RowDefinition() { Height = new GridLength(140, GridUnitType.Pixel)
+                    new RowDefinition() { Height = new GridLength(300, GridUnitType.Pixel)
                     });
 
                 // Lägga till en film i varje cell för en rad
                 for (int x = 0; x < column_count; x++)
                 {
                     // Räkna ut vilken film vi ska ploppa in härnäst utifrån mina x,y koordinater
-                    int i = y * column_count + x;
+                    int i = (y/2) * column_count + x;
                     // Kolla så att vi inte försöker fylla mer Grid celler än vi har filmrecords.
                     if (i < State.Movies.Count)
                     {
@@ -93,6 +93,22 @@ namespace Store
                         Grid.SetColumn(image, x);
                     }
                 }
+                MovieGrid.RowDefinitions.Add(
+                    new RowDefinition()
+                    {
+                        Height = new GridLength(50, GridUnitType.Pixel)
+                    });
+                for (int i = 0; i < column_count; i++)
+                {
+                    int x = (y / 2) * column_count + i;
+                    var test = State.Movies[x];
+                    var label = new Label();
+                    label.Content = test.Title;
+                    Grid.SetRow(label, y+1);
+                    Grid.SetColumn(label,i);
+                    MovieGrid.Children.Add(label);
+                }
+                y++;
             }
         }
 
@@ -120,6 +136,13 @@ namespace Store
         {
             UserWindow objUserWindow = new UserWindow();
             objUserWindow.Show();
+        }
+
+        private void Sort_by_name_Click(object sender, RoutedEventArgs e)
+        {
+            Sort_function_abc objUserWindow = new Sort_function_abc();
+            objUserWindow.Show();
+            this.Close();
         }
     }
 }
