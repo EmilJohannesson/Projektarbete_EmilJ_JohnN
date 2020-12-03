@@ -27,7 +27,7 @@ namespace DatabaseConnection
         public static List<Movie> GetMovieSliceAlpha(int skip_x, int take_x)
         {
             return ctx.Movies
-                .OrderBy(m => m.Title)
+                .OrderByDescending(m => m.Score)
                 .Skip(skip_x)
                 .Take(take_x)
                 .ToList();

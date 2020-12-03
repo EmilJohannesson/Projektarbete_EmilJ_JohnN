@@ -103,7 +103,7 @@ namespace Store
                     int x = (y / 2) * column_count + i;
                     var test = State.Movies[x];
                     var label = new Label();
-                    label.Content = test.Title;
+                    label.Content = test.Title + " " + test.Score;
                     Grid.SetRow(label, y+1);
                     Grid.SetColumn(label,i);
                     MovieGrid.Children.Add(label);

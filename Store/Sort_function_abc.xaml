@@ -19,8 +19,7 @@
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" Height="50" Width="1200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-50,0,0" Grid.ColumnSpan="6">
                 <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="240,0,10,0" >User window</Button>
-                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,0">Sort by name</Button>
-                <Button VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,0">Sort by rating</Button>
+                <Button Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,0">Sort by name</Button>
             </StackPanel>
         </Grid>
     </ScrollViewer>
