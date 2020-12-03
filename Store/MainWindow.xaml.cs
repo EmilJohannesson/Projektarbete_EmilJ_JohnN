@@ -118,7 +118,7 @@ namespace Store
             // Ta reda på vilken koordinat den klickade bilden har.
             var x = Grid.GetColumn(sender as UIElement);
             var y = Grid.GetRow(sender as UIElement);
-            
+
             // Används koordinaten för att ta reda på vilken motsvarande record det rörde sig om.
             int i = y * MovieGrid.ColumnDefinitions.Count + x;
             // Lägg valet på minne.

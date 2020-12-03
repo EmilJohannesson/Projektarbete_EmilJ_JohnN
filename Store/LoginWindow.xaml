@@ -20,6 +20,7 @@
             som finns definierad inne i 'LoginWindow.xaml.cs'
         -->
         <Button Click="LogIn_Click" Content="Log In" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top"/>
+        <Button Click="Button_Click" Content="Admin" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top"/>
         <PasswordBox Name="PasswordField" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
