@@ -105,7 +105,7 @@ namespace Store
                     int x = (y / 2) * column_count + i;
                     var test = State.Movies[x];
                     var label = new Label();
-                    label.Content = test.Title + " " + test.Score;
+                    label.Content = test.Title + "\n" + test.Score;
                     Grid.SetRow(label, y + 1);
                     Grid.SetColumn(label, i);
                     MovieGrid.Children.Add(label);
@@ -120,6 +120,8 @@ namespace Store
             // Ta reda på vilken koordinat den klickade bilden har.
             var x = Grid.GetColumn(sender as UIElement);
             var y = Grid.GetRow(sender as UIElement);
+
+            y = y - (y / 2);
 
             // Används koordinaten för att ta reda på vilken motsvarande record det rörde sig om.
             int i = y * MovieGrid.ColumnDefinitions.Count + x;
