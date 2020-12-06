@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using DatabaseConnection;
+using System.Linq;
 
 namespace Store
 {
@@ -20,11 +22,8 @@ namespace Store
         public UserWindow()
         {
             InitializeComponent();
-        }
-
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            UserLabel.Content = State.User.Name;
+            ListViewRentals.ItemsSource = State.User.Sales;
         }
     }
 }

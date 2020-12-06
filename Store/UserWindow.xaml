@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="UserWindow" Height="450" Width="600">
+        Title="UserWindow" Height="600" Width="1200">
     <Grid>
-        <ListView x:Name="ListView1" Margin="23,44,360,44" SelectionChanged="ListView_SelectionChanged">
+        <Label Name="UserLabel" Margin="195,10,157,517"/>
+        <ListView x:Name="ListViewRentals" Margin="19,72,801,72">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
                 </GridView>
             </ListView.View>
+            
         </ListView>
 
     </Grid>
