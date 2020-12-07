@@ -47,5 +47,19 @@ namespace Store
             EditAccountWindow objEditAccountWindow = new EditAccountWindow();
             objEditAccountWindow.Show();
         }
+
+        private void log_out(object sender, RoutedEventArgs e)
+        {
+            var next_window = new LoginWindow();
+            next_window.Show();
+            this.Close();
+        }
+
+        private void go_back(object sender, RoutedEventArgs e)
+        {
+            var next_window = new MainWindow();
+            next_window.Show();
+            this.Close();
+        }
     }
 }

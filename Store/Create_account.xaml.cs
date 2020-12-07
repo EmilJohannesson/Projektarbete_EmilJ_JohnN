@@ -52,7 +52,7 @@ namespace Store
                 }
                 else
                 {
-                    MessageBox.Show("Email or password, already in use!");
+                    MessageBox.Show("Email already in use!");
                 }
             }
         }

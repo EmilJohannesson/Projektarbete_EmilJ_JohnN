@@ -19,5 +19,7 @@
         </ScrollViewer>
         <Button Content="Change login information" Click="Button_Click" HorizontalAlignment="Left" Margin="961,507,0,0" VerticalAlignment="Top" Height="41" Width="161"/>
 
+        <Button Name="logout" Click="log_out" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30, 20, 0, 0">Log out</Button>
+        <Button Name="back" Click="go_back" Width="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100, 20, 0, 0">Back</Button>
     </Grid>
 </Window>

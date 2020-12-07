@@ -28,10 +28,6 @@ namespace DatabaseConnection
             {
                 entity.HasIndex(c => c.Email).IsUnique();
             });
-            modelBuilder.Entity<Customer>(entity =>
-            {
-                entity.HasIndex(c => c.PassWord).IsUnique();
-            });
         }
     }
 }
