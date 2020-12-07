@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="Sort_function_abc" Height="600" Width="1200">
+        Title="Sort_function_abc" Height="600" Width="1200"
+        WindowStartupLocation="CenterScreen">
     <ScrollViewer>
         <Grid Name="MovieGrid" Margin="0,50,0,0" Background="LightSteelBlue" ShowGridLines="false">
             <Grid.ColumnDefinitions>

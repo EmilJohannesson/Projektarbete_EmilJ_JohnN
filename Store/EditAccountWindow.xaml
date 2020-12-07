@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="EditAccountWindow" Height="600" Width="1200">
+        Title="EditAccountWindow" Height="600" Width="1200"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel>
             <Label Content="Full name:" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0, 5, 0, 0"/>

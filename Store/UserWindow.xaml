@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="UserWindow" Height="600" Width="1200">
+        Title="UserWindow" Height="600" Width="1200"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Label Name="UserLabel" Margin="195,10,157,517"/>
         <ScrollViewer Margin="42,67,817,73">

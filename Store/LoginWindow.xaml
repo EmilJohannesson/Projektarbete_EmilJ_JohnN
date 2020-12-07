@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="600" Width="1200">
+        Title="LoginWindow" Height="600" Width="1200"
+        WindowStartupLocation="CenterScreen">
     <Grid RenderTransformOrigin="0.494,0.518">
         <Label Content="Enter Your Email" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top"/>
         <Label Content="Enter Your Password" HorizontalAlignment="Center" Margin="0,210,0,0"/>
@@ -22,6 +23,5 @@
         <PasswordBox Name="PasswordField" HorizontalAlignment="Center" Margin="0,240,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Click="LogIn_Click" Content="Log In" HorizontalAlignment="Center" Margin="0,286,0,0" VerticalAlignment="Top"/>
         <Button Click="Create_account_click" Content="Create account" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 320, 0, 0"/>
-        <Button Click="Button_Click" Content="Logga in som Björn" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

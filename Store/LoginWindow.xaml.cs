@@ -59,15 +59,6 @@ namespace Store
         {
 
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            State.User = API.GetCustomerByEmail("björn@mail.com");
-            var next_window = new MainWindow();
-            next_window.Show();
-            this.Close();
-        }
-
         private void Create_account_click(object sender, RoutedEventArgs e)
         {
             var next_window = new Create_account();

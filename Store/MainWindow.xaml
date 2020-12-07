@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1200">
+        Title="MainWindow" Height="600" Width="1200"
+        WindowStartupLocation="CenterScreen"
+        >
+        
     <!-- En ScrollViewer för att kunna scrolla igenom alla filmer -->
     <ScrollViewer>
         <!-- 
