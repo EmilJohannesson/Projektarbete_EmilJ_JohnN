@@ -22,7 +22,7 @@ namespace Store
         public UserWindow()
         {
             InitializeComponent();
-            UserLabel.Content = State.User.Name;
+            UserLabel.Content = State.User.Sales;
             ListViewRentals.ItemsSource = State.User.Sales;
         }
     }
