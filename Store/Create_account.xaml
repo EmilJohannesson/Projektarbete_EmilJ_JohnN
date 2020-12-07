@@ -1,0 +1,23 @@
+﻿<Window x:Class="Store.Create_account"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Store"
+        mc:Ignorable="d"
+        Title="Create_account" Height="600" Width="1200">
+    <Grid>
+        <StackPanel>
+            <Label Content="Full name:" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0, 40, 0, 0"/>
+            <TextBox Name="name_field" Width="160" HorizontalAlignment="Center" Margin="0, 20, 0, 0"/>
+            <Label Content="Email:" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0, 40, 0, 0"/>
+            <TextBox Name="email_field" Width="160" HorizontalAlignment="Center" Margin="0, 20, 0, 0"/>
+            <Label Content="Password:" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0, 40, 0, 0"/>
+            <PasswordBox Name="password_field" Width="160" HorizontalAlignment="Center" Margin="0, 20, 0, 0"/>
+            <Label Content="Confirm password:" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0, 40, 0, 0"/>
+            <PasswordBox Name="confirm_password_field" Width="160" HorizontalAlignment="Center" Margin="0, 20, 0, 0"/>
+            <Button Click="Create_account_click" Name="create_account" Content="Create account!" Width="150" Height="40" HorizontalAlignment="Center" Margin="0, 40, 0, 0"/>
+        </StackPanel>
+        <Button Click="Login_page" Name="back" Content="Login page" Height="40" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50, 30, 0, 0"/>
+    </Grid>
+</Window>

@@ -32,17 +32,17 @@ namespace DatabaseConnection
                 .Take(take_x)
                 .ToList();
         }
-        public static Customer GetCustomerByName(string name)
+        public static Customer GetCustomerByEmail(string name)
         {
             return ctx.Customers
-                .FirstOrDefault(c => c.Name.ToLower() == name.ToLower());
+                .FirstOrDefault(c => c.Email.ToLower() == c.Email.ToLower());
         }
-        public static bool GetPasswordByName(string password, string username) // Metod för att kolla password
+        public static bool GetPasswordByEmail(string password, string username) // Metod för att kolla password
         {
             var password_check = "";
             try
             {
-                password_check = ctx.Customers.Where(c => c.Name == username).Single().PassWord; // hämta password från Databasen
+                password_check = ctx.Customers.Where(c => c.Email == username).Single().PassWord; // hämta password från Databasen
             }
             catch
             {
@@ -69,6 +69,25 @@ namespace DatabaseConnection
             {
                 System.Diagnostics.Debug.WriteLine(e.Message);
                 System.Diagnostics.Debug.WriteLine(e.InnerException.Message);
+                return false;
+            }
+        }
+        public static bool Create_account(string Name, string email, string password)
+        {
+            try
+            {
+                using (var ctx = new Context())
+                {
+                    ctx.AddRange(new List<Customer> {
+                    new Customer { Name = Name, Email = email, PassWord = password }
+                    });
+
+                    ctx.SaveChanges();
+                }
+                return true;
+            }
+            catch
+            {
                 return false;
             }
         }

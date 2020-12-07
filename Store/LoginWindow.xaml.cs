@@ -27,14 +27,14 @@ namespace Store
         {
             // Använder min namngedda TextBox objektinstans för att få tag på
             // det användaren skrev in.
-            string username_in_text = NameField.Text.Trim();
+            string Email_in_text = NameField.Text.Trim();
 
             string password_in_text = PasswordField.Password;
 
             // Kallar på min databas api för att få ut ett record som matchar namnet.
-            State.User = API.GetCustomerByName(username_in_text);
+            State.User = API.GetCustomerByEmail(Email_in_text);
 
-            bool password = API.GetPasswordByName(password_in_text, username_in_text);
+            bool password = API.GetPasswordByEmail(password_in_text, Email_in_text);
 
             // Om ett record hittades...
             if (State.User != null && password)
@@ -63,6 +63,13 @@ namespace Store
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var next_window = new MainWindow();
+            next_window.Show();
+            this.Close();
+        }
+
+        private void Create_account_click(object sender, RoutedEventArgs e)
+        {
+            var next_window = new Create_account();
             next_window.Show();
             this.Close();
         }
