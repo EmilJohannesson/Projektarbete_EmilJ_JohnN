@@ -22,13 +22,16 @@ namespace Store
         public UserWindow()
         {
             InitializeComponent();
+
+            //säg hej
             UserLabel.Content = State.User.Name;
 
+            //Lista alla hyrda filmer av användaren
             for (int i = 0; i < State.User.Sales.Count; i++)
             {
                 Rental rentals = State.User.Sales[i];
                 var label = new Label();
-                label.Content = rentals.Movie.Title + "\n" + rentals.ReturnDate;
+                label.Content = rentals.Movie.Title + "\n" + "Return by: " + rentals.ReturnDate;
                 Grid.SetRow(label, i);
                 RentedMoviesGrid.Children.Add(label);
 
@@ -37,6 +40,12 @@ namespace Store
                 Height = new GridLength(50, GridUnitType.Pixel)
                 });
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            EditAccountWindow objEditAccountWindow = new EditAccountWindow();
+            objEditAccountWindow.Show();
         }
     }
 }

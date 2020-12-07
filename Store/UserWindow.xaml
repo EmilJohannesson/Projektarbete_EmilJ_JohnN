@@ -17,6 +17,7 @@
                 </Grid.RowDefinitions>
             </Grid>
         </ScrollViewer>
+        <Button Content="Change login information" Click="Button_Click" HorizontalAlignment="Left" Margin="961,507,0,0" VerticalAlignment="Top" Height="41" Width="161"/>
 
     </Grid>
 </Window>

@@ -9,7 +9,7 @@ namespace DatabaseConnection
     public static class API
     {
         // Här har jag ett kontext tillgängligt för alla API metoder.
-        static Context ctx;
+        public static Context ctx;
 
         // Statiska konstruktorer kallas på innan den statiska klassen används.
         static API()
@@ -35,7 +35,7 @@ namespace DatabaseConnection
         public static Customer GetCustomerByEmail(string name)
         {
             return ctx.Customers
-                .FirstOrDefault(c => c.Email.ToLower() == c.Email.ToLower());
+                .FirstOrDefault(c => c.Email.ToLower() == name.ToLower());
         }
         public static bool GetPasswordByEmail(string password, string username) // Metod för att kolla password
         {
