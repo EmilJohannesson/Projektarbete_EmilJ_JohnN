@@ -19,6 +19,8 @@
             <Label Content="Confirm new password:" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" Margin="0, 20, 0, 0"/>
             <PasswordBox Name="Confirm_new_password_field" Width="160" HorizontalAlignment="Center" Margin="0, 5, 0, 0"/>
             <Button Click="Edit_account_Click" Name="Edit_account" Content="Edit account!" Width="150" Height="40" HorizontalAlignment="Center" Margin="0, 40, 0, 0"/>
+
         </StackPanel>
+        <Button Content="User Window" Click="Button_Click" Margin="73,490,975,46"/>
     </Grid>
 </Window>

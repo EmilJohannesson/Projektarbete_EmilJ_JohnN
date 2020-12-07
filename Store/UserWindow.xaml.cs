@@ -46,6 +46,7 @@ namespace Store
         {
             EditAccountWindow objEditAccountWindow = new EditAccountWindow();
             objEditAccountWindow.Show();
+            this.Close();
         }
 
         private void log_out(object sender, RoutedEventArgs e)
