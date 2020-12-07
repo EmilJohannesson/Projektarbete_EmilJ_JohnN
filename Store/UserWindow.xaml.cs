@@ -22,8 +22,16 @@ namespace Store
         public UserWindow()
         {
             InitializeComponent();
-            UserLabel.Content = State.User.Sales;
-            ListViewRentals.ItemsSource = State.User.Sales;
+            UserLabel.Content = State.User.Name;
+
+            for (int i = 0; i < State.User.Sales.Count; i++)
+            {
+                Rental rentals = State.User.Sales[i];
+                var label = new Label();
+                label.Content = rentals.Movie.Title;
+                Grid.SetRow(label, i);
+                RentedMoviesGrid.Children.Add(label);
+            }
         }
     }
 }

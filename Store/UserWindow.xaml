@@ -8,14 +8,15 @@
         Title="UserWindow" Height="600" Width="1200">
     <Grid>
         <Label Name="UserLabel" Margin="195,10,157,517"/>
-        <ListView x:Name="ListViewRentals" Margin="19,72,801,72">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-            
-        </ListView>
+        <ScrollViewer Margin="42,67,817,73">
+            <Grid Name="RentedMoviesGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="170"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                </Grid.RowDefinitions>
+            </Grid>
+        </ScrollViewer>
 
     </Grid>
 </Window>
