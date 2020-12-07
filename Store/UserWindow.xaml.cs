@@ -28,9 +28,14 @@ namespace Store
             {
                 Rental rentals = State.User.Sales[i];
                 var label = new Label();
-                label.Content = rentals.Movie.Title;
+                label.Content = rentals.Movie.Title + "\n" + rentals.ReturnDate;
                 Grid.SetRow(label, i);
                 RentedMoviesGrid.Children.Add(label);
+
+                RentedMoviesGrid.RowDefinitions.Add(new RowDefinition()
+                {
+                Height = new GridLength(50, GridUnitType.Pixel)
+                });
             }
         }
     }

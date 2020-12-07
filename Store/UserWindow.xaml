@@ -11,7 +11,7 @@
         <ScrollViewer Margin="42,67,817,73">
             <Grid Name="RentedMoviesGrid">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="170"/>
+                    <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                 </Grid.RowDefinitions>
