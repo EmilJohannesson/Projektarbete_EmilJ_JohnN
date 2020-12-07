@@ -138,12 +138,20 @@ namespace Store
         {
             UserWindow objUserWindow = new UserWindow();
             objUserWindow.Show();
+            this.Close();
         }
 
         private void Sort_by_name_Click(object sender, RoutedEventArgs e)
         {
             Sort_function_abc objUserWindow = new Sort_function_abc();
             objUserWindow.Show();
+            this.Close();
+        }
+
+        private void log_out(object sender, RoutedEventArgs e)
+        {
+            var next_window = new LoginWindow();
+            next_window.Show();
             this.Close();
         }
     }

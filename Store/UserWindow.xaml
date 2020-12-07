@@ -17,6 +17,7 @@
                 </Grid.RowDefinitions>
             </Grid>
         </ScrollViewer>
-
+        <Button Name="logout" Click="log_out" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30, 20, 0, 0">Log out</Button>
+        <Button Name="back" Click="go_back" Width="45" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100, 20, 0, 0">Back</Button>
     </Grid>
 </Window>

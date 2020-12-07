@@ -25,6 +25,7 @@
             <Grid.RowDefinitions>
             </Grid.RowDefinitions>
             <StackPanel Orientation="Horizontal" Height="50" Width="1200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,-50,0,0" Grid.ColumnSpan="6">
+                <Button Name="logout" Click="log_out" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50, 0, 0, 0">Log out</Button>
                 <Button Name="UserWindowButton" Click="UserWindowButton_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="240,0,10,0" >User window</Button>
                 <Button Name="Sort_by_name" Click="Sort_by_name_Click" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,0">Sort by rating</Button>
             </StackPanel>
